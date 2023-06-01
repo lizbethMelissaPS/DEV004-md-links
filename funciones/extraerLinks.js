@@ -3,6 +3,7 @@ export function getLink(data, path) {
     const patronhref = /https?:\/{2}.*?(?=\))/g
     const patronText = /(?!\[).*(?=\])/g
     const linkMatch = data.match(patronLink);// El método match() devuelve todas las ocurrencias de una expresión regular dentro de una cadena
+    console.log('getLink ',linkMatch);
     const links = [];
     if (linkMatch) {
       linkMatch.forEach((link) => {

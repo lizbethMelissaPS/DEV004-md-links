@@ -4,7 +4,7 @@ export const validateLinks = (arrLinks) => {
     return fetch(link.href)
       .then(response => {
         link.status = response.status;
-        link.mensage = response.statusText;
+        link.message = response.statusText;
         return link
       })
       .catch(() => {
