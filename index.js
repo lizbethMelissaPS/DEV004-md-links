@@ -30,25 +30,13 @@ export const mdLinks = (path, option) => {
       console.log("directorio no existe entonces a leer archivo");
 
       if (!archivoMD(rutaAbsoluta)) {
-        console.log(errorChalk('No se encontraron archivos MD que analizar'));
+        reject(chalk.red("No se encontraron archivos MD que analizar"));
         return
       }
 
       // leer archivo   resuelve links
       leerArchivo(rutaAbsoluta)
         .then((links) => {
-          if (option.stats && option.validate) {
-            console.log('stats && validate');
-            // resolve (validateStats(links));
-             return validateStats(links);
-            /* const output = validateStats(links);
-            resolve(output); */
-            /* validateStats(links).then((stats) => {
-              // return data
-              resolve(stats);
-            }) */
-            return
-          }
           if (option.validate) {
             console.log('option.validate');
             // return validateLinks(links)
@@ -58,6 +46,20 @@ export const mdLinks = (path, option) => {
             })
             return
           }
+          if (option.stats && option.validate) {
+            console.log('stats && validate');
+            // resolve (validateStats(links));
+            console.log('validateStats(links):   ', validateStats(links));
+             return validateStats(links);
+            /* const output = validateStats(links);
+            resolve(output); */
+            /* validateStats(links).then((stats) => {
+              // return data
+              resolve(stats);
+            }) */
+            //return
+          }
+          
           
           if (option.stats) {
             console.log('option.stats ');
