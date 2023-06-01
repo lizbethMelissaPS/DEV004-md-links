@@ -10,9 +10,8 @@
 
 * [1. Resumen del proyecto](#1-resumen-del-proyecto)
 * [2. Consideraciones generales](#2-consideraciones-generales)
-* [3. Instala](#3-instala)
-* [4. Modo de uso](#4-modo-de-uso)
-* [5. Diagrama de flujo](#5-diagrama-de-flujo)
+* [3. Modo de uso](#4-modo-de-uso)
+* [4. Diagrama de flujo](#5-diagrama-de-flujo)
 
 ***
 
@@ -125,6 +124,6 @@ Unicos: 3
 Broken: 1
 ```
 
-## 5. Diagrama de flujo
+## 4. Diagrama de flujo
 
 ![FlowChart](./diagramaFlujoMD.png)
